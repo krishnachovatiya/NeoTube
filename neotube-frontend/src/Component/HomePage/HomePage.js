@@ -1,5 +1,9 @@
 import React from 'react'
 import './HomePage.css'
+import { Link } from 'react-router-dom'
+
+
+
 
 const HomePage = ({sidenavbar}) => {
  
@@ -18,7 +22,7 @@ const options=["All", "Comedy", "Education", "Music", "Mixes", "Calculus", "Indi
 
 
       <div className={sidenavbar? "home-mainpage" : "fullMainHomePage"}>
-        <div className="neotube-video">
+        <Link to={'/watch/1234'} className="neotube-video">
           <div className="neotube-thumbnailBox">
             <img src="https://www.vdocipher.com/blog/wp-content/uploads/2023/12/DALL%C2%B7E-2023-12-10-20.21.58-A-creative-and-visually-appealing-featured-image-for-a-blog-about-video-thumbnails-for-various-social-platforms-like-YouTube-Instagram-and-TikTok-s-1024x585.png" alt="thumbnail" className="thumbnailPic" />
             <div className="thumbnail-timing">20:00</div>
@@ -37,7 +41,7 @@ const options=["All", "Comedy", "Education", "Music", "Mixes", "Calculus", "Indi
 
           </div>
          
-        </div>
+        </Link>
         <div className="neotube-video">
           <div className="neotube-thumbnailBox">
             <img src="https://www.vdocipher.com/blog/wp-content/uploads/2023/12/DALL%C2%B7E-2023-12-10-20.21.58-A-creative-and-visually-appealing-featured-image-for-a-blog-about-video-thumbnails-for-various-social-platforms-like-YouTube-Instagram-and-TikTok-s-1024x585.png" alt="thumbnail" className="thumbnailPic" />

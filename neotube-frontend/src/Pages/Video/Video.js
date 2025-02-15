@@ -2,6 +2,8 @@ import React from 'react'
 import './Video.css'
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import ThumbDownIcon from '@mui/icons-material/ThumbDown';
+import {toast,ToastContainer} from 'react-toastify'
+import { Link } from 'react-router-dom';
 
 const Video = () => {
   return (
@@ -14,16 +16,17 @@ const Video = () => {
         </div>
 
         <div className="videoAbout">
-            <div className="videoTitle">Javascript for begineers</div>
+            <div className="videoTitle">{"Javascript for begineers"}</div>
+
             <div className="neoTube_video_ProfileBlock">
                 <div className="neoTube_video_ProfileBlockLeft">
-                    <div className="ProfileBlockLeftImages">
+                    <Link to={'/user/12'} className="ProfileBlockLeftImages">
                         <img className='ProfileBlockLeftImage' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3I8MHCoQwIr7JRNGJofutnnyXyD12S0aRBw&s" alt="" />
-                    </div>
+                    </Link>
 
                     <div className="video_subsView">
-                        <div className="neoTubeProfileName">User 1</div>
-                        <div className="neoTubeProfileSubs">2024-01-20</div>
+                        <div className="neoTubeProfileName">{"User 1"}</div>
+                        <div className="neoTubeProfileSubs">{"2024-01-20"}</div>
                     </div>
 
                     <div className="subsButton">Subscribe</div>
@@ -56,16 +59,71 @@ const Video = () => {
             <div className="neotubeCommentSection">
 
               <div className="neotubeCommentSectionTitle">2 comment</div>
-              <div className="neotubeSelfComment">
+              
+              <div className="neotubeSelfComment"> 
                 <img className='neotubeSelfCommentProfile' src="https://media.istockphoto.com/id/1087531642/vector/male-face-silhouette-or-icon-man-avatar-profile-unknown-or-anonymous-person-vector.jpg?s=612x612&w=0&k=20&c=FEppaMMfyIYV2HJ6Ty8tLmPL1GX6Tz9u9Y8SCRrkD-o=" alt="" srcset="" />
-                <div className="addComment">
-                  <input type="text" className='addAComment' placeholder='Add a comment' />
+                <div className="addAComment">
+                  <input type="text" className='addACommentInput' placeholder='Add a comment' />
                   <div className="cancelSubmitComment">
                     <div className="cancelComment">Cancel</div>
-                    <div className="cancelComment">Comment</div>
+                    <div className="cancelComment">Comment</div>  
                   </div>
                 </div>
               </div>
+
+              <div className="neotubeOtherComments">
+                <div className="neotubeSelfComment"> 
+                  <img className='neotubeSelfCommentProfile' src="https://media.istockphoto.com/id/1087531642/vector/male-face-silhouette-or-icon-man-avatar-profile-unknown-or-anonymous-person-vector.jpg?s=612x612&w=0&k=20&c=FEppaMMfyIYV2HJ6Ty8tLmPL1GX6Tz9u9Y8SCRrkD-o=" alt="" srcset="" />
+                 
+                  <div className="otherCommentSection">
+                    <div className="otherCommentSectionHeader">
+                      <div className="channelName_comment">{"User 1"}</div>
+                      <div className="commentTimingOther">{"6 months ago"}</div>
+                    </div>
+
+                    <div className="otherCommentSectionComment">
+                      this is a nice project
+                    </div>
+
+                  </div>
+               
+                </div>
+
+                <div className="neotubeSelfComment"> 
+                  <img className='neotubeSelfCommentProfile' src="https://media.istockphoto.com/id/1087531642/vector/male-face-silhouette-or-icon-man-avatar-profile-unknown-or-anonymous-person-vector.jpg?s=612x612&w=0&k=20&c=FEppaMMfyIYV2HJ6Ty8tLmPL1GX6Tz9u9Y8SCRrkD-o=" alt="" srcset="" />
+                 
+                  <div className="otherCommentSection">
+                    <div className="otherCommentSectionHeader">
+                      <div className="channelName_comment">{"User 1"}</div>
+                      <div className="commentTimingOther">{"6 months ago"}</div>
+                    </div>
+
+                    <div className="otherCommentSectionComment">
+                      this is a nice project
+                    </div>
+
+                  </div>
+               
+                </div>
+
+                <div className="neotubeSelfComment"> 
+                  <img className='neotubeSelfCommentProfile' src="https://media.istockphoto.com/id/1087531642/vector/male-face-silhouette-or-icon-man-avatar-profile-unknown-or-anonymous-person-vector.jpg?s=612x612&w=0&k=20&c=FEppaMMfyIYV2HJ6Ty8tLmPL1GX6Tz9u9Y8SCRrkD-o=" alt="" srcset="" />
+                 
+                  <div className="otherCommentSection">
+                    <div className="otherCommentSectionHeader">
+                      <div className="channelName_comment">{"User 1"}</div>
+                      <div className="commentTimingOther">{"6 months ago"}</div>
+                    </div>
+
+                    <div className="otherCommentSectionComment">
+                      this is a nice project
+                    </div>
+
+                  </div>
+               
+                </div>
+              </div>
+
             </div>
 
 
@@ -74,8 +132,103 @@ const Video = () => {
       </div>
 
       <div className="videoSuggestions">
-        Video SUggestion
-      </div>
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+
+
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+                
+                <div className="videoSuggestionsBlock">
+                    <div className="video_suggetion_thumbnail">
+                        <img src="https://th.bing.com/th/id/OIP.8gLtXrl4KYPfPA6QyMnlUwHaEK?w=304&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" className='video_suggetion_thumbnail_img' />
+                    </div>
+                    <div className="video_suggetions_About">
+                        <div className="video_suggetions_About_title">T20 2024 Worldcup Final IND vs SA Last 5 overs #cricket #india</div>
+                        <div className="video_suggetions_About_Profile">Cricket 320</div>
+                        <div className="video_suggetions_About_Profile">136K views . 1 day ago</div>
+                    </div>
+                </div>
+            </div>
+
+            <ToastContainer/>
+
+      
     </div>
   )
 }

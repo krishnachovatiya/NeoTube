@@ -152,6 +152,72 @@
     width: 100%;
 }
 
+.addACommentInput{
+    width: 100%;
+    background-color: black;
+    color: white;
+    height: 35px;
+    border: none;
+    font-size: 16px;
+    border-bottom: 1px solid gray;
+    &:focus{
+        outline: none;
+    }
+    &::placeholder{
+        font-size: 16px;
+    }
+}
+
+.cancelSubmitComment{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.cancelComment{
+    border-radius: 18px;
+    border: 1px solid;
+    cursor: pointer;
+    padding: 8px 30px;
+    &:hover{
+        background-color: white;
+        color: black;
+    }
+}
+
+.neotubeOtherComments{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.otherCommentSection{
+    display: flex;
+    flex-direction: column;
+}
+
+.otherCommentSectionHeader{
+  
+    display: flex;
+    gap: 10px;
+}
+
+.channelName_comment{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.commentTimingOther{
+    font-size: 14px;
+    color: #AAAAAA;
+}
+
+.otherCommentSectionComment{
+    margin-top: 10px;
+}
+
+
 /* ------------------------------------ */
 
 .videoSuggestions{
@@ -159,7 +225,34 @@
     max-width: 406px;
     padding: 10px 15px;
     gap: 15px;
+    color: white;
     display: flex;
     flex-direction: column;
-    color: white;
+}
+
+.videoSuggestionsBlock{
+    display: flex;
+    gap: 15px;
+    cursor: pointer;
+}
+.video_suggetion_thumbnail{
+    width: 168px;
+    height: 94px;
+}
+.video_suggetion_thumbnail_img{
+    width: inherit;
+}
+.video_suggetions_About{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+.video_suggetions_About_title{
+    font-size: 15px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.video_suggetions_About_Profile{
+    color: #ffffff9c;
+    font-size: 12px;
 }
